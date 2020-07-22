@@ -1,0 +1,27 @@
+.container {
+    color: black;
+        background-color: cornsilk;
+		border: 3px solid rgb(110, 13, 110);
+		margin: 1em;
+  }
+
+  /* .control {
+    margin: 1em;
+} */
+
+.button {
+    margin: 1em;
+}
+
+.theMessage {
+	background-color:white;
+	padding: 0.5em;
+	margin: 1em;
+}
+
+@media(min-width: 1024px) {
+	.container {
+		width: 80%;
+		margin: auto;
+	}
+}
