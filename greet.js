@@ -2,22 +2,22 @@ const greetBtn = document.querySelector(".greetUpdate");
 const radioBtn = document.querySelector(".radioGreet");
 const text = document.querySelector(".nameEntered")
 const message = document.querySelector(".message");
-const counter = document.querySelector(".counter");
+const count = document.querySelector(".counter");
 
 const greetInstance = greetFactory();
 
-function greetBtnClicked() {
-    var checkedRadioBtn = document.querySelector("input[name='language']:checked");
-
-    if (checkedRadioBtn) {
-        var nameTyped = checkedRadioBtn.value;
-        greetInstance.theLanguage(nameTyped);
-       // totalTwo.classList.add(greetInstance.totalClassName())
-        getTheName.innerHTML = greetInstance.add(theLanguage())
-       
-    }
-}
-
 greetBtn.addEventListener("click", function () {
-    // alert(greetBtn);
+
+    if (text.value == "") {
+        message.innerHTML = "please enter your name";
+        return;
+    }
+    message.innerHTML = "please choose your home language";
+
+    var checkedRadioBtn = document.querySelector("input[name='language']:checked");
+    var uppercaseName = text.value.charAt(0).toUpperCase() + text.value.slice(1).toLowerCase();
+    var checkedBtn = checkedRadioBtn.value;
+    message.innerHTML = greetInstance.setTheName(uppercaseName);
+    message.innerHTML = greetInstance.theLanguage(checkedBtn, uppercaseName);
+    count.innerHTML = greetInstance.counter();
 });

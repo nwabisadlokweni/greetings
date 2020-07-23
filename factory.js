@@ -3,15 +3,19 @@ function greetFactory() {
     var theNames = [];
 
     function setTheName(name) {
-        theNames.push(name);
+        if (theNames.includes(name)) {
+            return ("This name already exist");
+        }
+        else {
+            theNames.push(name);
+        }
+
     }
 
     function getTheName() {
-        // if (theNames == "") {
-        //     message.innerHTML = "Please enter your name";
-        // }
         return theNames;
     }
+
 
     function theLanguage(languageClicked, theNames) {
         if (languageClicked === 'English') {
@@ -32,7 +36,7 @@ function greetFactory() {
     }
 
     function counter() {
-
+        return theNames.length;
     }
 
     return {

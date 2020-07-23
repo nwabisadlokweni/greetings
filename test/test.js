@@ -17,6 +17,15 @@ describe("Greetings exercise", function () {
     
     })
 
+    // it("should be able to greet a person in IsiZulu", function () {
+    //     let greeting = greetFactory();
+
+    //     greeting.theLanguage();
+        
+    //     assert.equal("Sawubona, Nwabisa", greeting.theLanguage("IsiZulu", "Nwabisa"));
+    
+    // })
+
     it("should be able to greet a person in English", function () {
         let greeting = greetFactory();
 
