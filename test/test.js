@@ -17,21 +17,12 @@ describe("Greetings exercise", function () {
     
     })
 
-    // it("should be able to greet a person in IsiZulu", function () {
-    //     let greeting = greetFactory();
-
-    //     greeting.theLanguage();
-        
-    //     assert.equal("Sawubona, Nwabisa", greeting.theLanguage("IsiZulu", "Nwabisa"));
-    
-    // })
-
     it("should be able to greet a person in English", function () {
         let greeting = greetFactory();
 
         greeting.theLanguage();
         
-        assert.equal("Hello, Nwabisa", greeting.theLanguage("English", "Nwabisa"));
+        assert.equal("Greeting, Nwabisa", greeting.theLanguage("English", "Nwabisa"));
     
     })
 
@@ -63,4 +54,12 @@ describe("Greetings exercise", function () {
     
     })
 
+    // it("should count how many names have been entered", function (){
+    //     let greeting = greetFactory();
+
+    //     greeting.counter();
+    //    // greeting.counter();
+
+    //     assert.equal("Nwabisa", greeting.counter());
+    // })
 });
